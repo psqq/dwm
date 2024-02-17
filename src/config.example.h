@@ -92,10 +92,11 @@ static const char *rofi_run_cmd[] = { "rofi", "-show", "run", NULL };
 static const char *rofi_window_cmd[] = { "rofi", "-show", "window", NULL };
 static const char *xmouseless_cmd[] = { "xmouseless", NULL };
 
-/* */
-static const char *kblayout_us[]  = { "bash", "-c", "python /home/user/dwm_scripts/kb_layout.py set us && python /home/user/dwm_scripts/dwm_status_bar.py render", NULL };
-static const char *kblayout_ru[]  = { "bash", "-c", "python /home/user/dwm_scripts/kb_layout.py set ru && python /home/user/dwm_scripts/dwm_status_bar.py render", NULL };
-static const char *kblayout_circle[]  = { "bash", "-c", "python /home/user/dwm_scripts/kb_layout.py circle us ru && python /home/user/dwm_scripts/dwm_status_bar.py render", NULL };
+/* https://github.com/psqq/dwm-scripts */
+#define DWM_SCRIPTS_DIR "/home/USER_NAME/dwm-scripts"
+static const char *kblayout_us[]  = { "bash", "-c", "python " DWM_SCRIPTS_DIR "/kb_layout.py set us && python " DWM_SCRIPTS_DIR "/status_bar.py render", NULL };
+static const char *kblayout_ru[]  = { "bash", "-c", "python " DWM_SCRIPTS_DIR "/kb_layout.py set ru && python " DWM_SCRIPTS_DIR "/status_bar.py render", NULL };
+static const char *kblayout_circle[]  = { "bash", "-c", "python " DWM_SCRIPTS_DIR "/kb_layout.py circle us ru && python " DWM_SCRIPTS_DIR "/status_bar.py render", NULL };
 
 // set size in main.cpp
 const Key keys[500] = {

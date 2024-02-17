@@ -1,0 +1,9 @@
+/.vscode
+/*.o
+/dwm
+/transient
+/src/*.o
+/.ccls-cache
+/build
+/.cache
+/src/config.h

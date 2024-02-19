@@ -284,6 +284,7 @@ void drw_map(Drw *drw, Window win, int x, int y, unsigned int w,
              unsigned int h);
 
 /* function declarations */
+void runautostart(void);
 void winEnd();
 void winStart();
 void hideall(const Arg *arg);

@@ -34,6 +34,7 @@
 #define XEMBED_EMBEDDED_VERSION (VERSION_MAJOR << 16) | VERSION_MINOR
 
 /* function declarations */
+void runautostart(void);
 void winEnd();
 void winStart();
 void hideall(const Arg *arg);
@@ -210,6 +211,11 @@ Display *dpy;
 Drw *drw;
 Monitor *mons, *selmon;
 Window root, wmcheckwin;
+
+const char autostartblocksh[] = "autostart_blocking.sh";
+const char autostartsh[] = "autostart.sh";
+const char dwmdir[] = "dwm";
+const char localshare[] = ".local/share";
 
 /* loggers */
 void log_info(const char *format, ...);

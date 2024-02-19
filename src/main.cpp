@@ -165,7 +165,10 @@ int main(int argc, char* argv[]) {
     scan();
     log_info("run...");
     external_handler = x_events_listener;
+
+    runautostart();
     run();
+
     log_info("cleanup...");
     cleanup();
 

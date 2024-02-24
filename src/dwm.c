@@ -188,12 +188,12 @@ void self_restart(const Arg *arg) {
 	log_info("self_restart...");
     char *const argv[] = {get_dwm_path(), NULL};
 
-    if(argv[0] == NULL){
-	log_info("\t argv[0] is NULL!");
+    if(argv[0] == NULL) {
+		log_info("\t argv[0] (dwm_path) is NULL!");
         return;
     }
 
-	log_info("\t argv[0] = %s", argv[0]);
+	log_info("\t argv[0] (dwm_path) is '%s', execv it...", argv[0]);
     execv(argv[0], argv);
 }
 

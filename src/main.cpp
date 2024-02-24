@@ -141,7 +141,10 @@ int init_xkb() {
 }
 
 int main(int argc, char* argv[]) {
-    log_info("------ dwm-" VERSION " starting...");
+    log_info("------ dwm-" VERSION " starting... args:");
+    for (int i = 0; i < argc; i++) {
+        log_info("\targv[%d] is '%s'", i, argv[i]);
+    }
     if (argc == 2 && !strcmp("-v", argv[1]))
         die("dwm-" VERSION);
     else if (argc != 1)
